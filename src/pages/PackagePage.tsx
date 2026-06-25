@@ -1,6 +1,7 @@
 import React from "react";
-import "./PackagePage.css";
-import "./Homepage.css";
+
+import "../pages/packagePage.css";
+import "../pages/Homepage.css";
 import Navbar from "../components/Navbar.tsx";
 import Footer from "../components/Footer.tsx";
 

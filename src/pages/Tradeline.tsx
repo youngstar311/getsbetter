@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../pages/tradeline.css";
+import "../pages/Tradeline.css";
 
 import Navbar from "../components/Navbar.tsx";
 import Footer from "../components/Footer.tsx";
