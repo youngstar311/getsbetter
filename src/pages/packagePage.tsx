@@ -1,8 +1,8 @@
 import React from "react";
 import "./PackagePage.css";
 import "./Homepage.css";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "../components/Navbar.tsx";
+import Footer from "../components/Footer.tsx";
 
 const PackagePage: React.FC = () => {
   return (

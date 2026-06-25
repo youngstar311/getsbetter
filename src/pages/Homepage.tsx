@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import "../pages/Homepage.css"; // Import the CSS file for styling
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "../components/Navbar.tsx";
+import Footer from "../components/Footer.tsx";
 
 const Homepage: React.FC = () => {
   //const [aboutOpen, setAboutOpen] = useState<boolean>(false);

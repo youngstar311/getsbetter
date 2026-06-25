@@ -1,7 +1,8 @@
 import React from "react";
 import "./RiskFreePage.css";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+
+import Navbar from "../components/Navbar.tsx";
+import Footer from "../components/Footer.tsx";
 
 const RiskFreePage: React.FC = () => {
   return (

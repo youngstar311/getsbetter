@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "../pages/tradeline.css";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+
+import Navbar from "../components/Navbar.tsx";
+import Footer from "../components/Footer.tsx";
 
 const Tradeline: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);

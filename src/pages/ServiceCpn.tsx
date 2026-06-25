@@ -4,8 +4,8 @@ import "../pages/ServiceCpn.css";
 import "../pages/RiskFreePage.css"
 
 
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "../components/Navbar.tsx";
+import Footer from "../components/Footer.tsx";
 
 export default function ServiceCpn() {
   return (

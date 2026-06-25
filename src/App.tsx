@@ -1,16 +1,15 @@
-//src/App.tsx
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 
-import Homepage from "./pages/Homepage";
-import ServiceCpn from "./pages/ServiceCpn";
-import Tradeline from "./pages/Tradeline";
-import Repair from "./pages/Repair";
-import Playbook from "./pages/Playbook";
-import PackagePage from "./pages/PackagePage";
-import Document from "./pages/Document";
-import RiskFreePage from "./pages/RiskFreePage";
+import Homepage from "./pages/Homepage.tsx";
+import ServiceCpn from "./pages/ServiceCpn.tsx";
+import Tradeline from "./pages/Tradeline.tsx";
+import Repair from "./pages/Repair.tsx";
+import Playbook from "./pages/Playbook.tsx";
+import PackagePage from "./pages/PackagePage.tsx";
+import Document from "./pages/Document.tsx";
+import RiskFreePage from "./pages/RiskFreePage.tsx";
 
 const App: React.FC = () => {
   return (
