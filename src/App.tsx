@@ -9,9 +9,7 @@ import Repair from "./pages/Repair.tsx";
 import Playbook from "./pages/Playbook.tsx";
 import PackagePage from "./pages/PackagePage.tsx";
 import Document from "./pages/Document.tsx";
-import RiskFreePage from "./pages/RiskFreePage.tsx";\
-
-
+import RiskFreePage from "./pages/RiskFreePage.tsx";
 
 const App: React.FC = () => {
   return (
