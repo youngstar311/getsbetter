@@ -1,9 +1,10 @@
+import React from "react";
 import "./PackagePage.css";
 import "./Homepage.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-export default function PackagePage() {
+const PackagePage: React.FC = () => {
   return (
     <div className="homepage">
       <Navbar />
@@ -18,27 +19,25 @@ export default function PackagePage() {
       {/* Featured Service Card */}
       <section id="featured-service" className="featured-service">
         <div className="service-highlight">
-            <h2>Car & Apartment Packages</h2>
-            <h3 className="price">$850</h3>
-            <p><strong>Includes:</strong></p>
-            <ul>
+          <h2>Car & Apartment Packages</h2>
+          <h3 className="price">$850</h3>
+          <p><strong>Includes:</strong></p>
+          <ul>
             <li>CPN</li>
             <li>750 Score</li>
             <li>2 Pay-Stubs</li>
             <li>Digital SSC</li>
             <li>DL and 2 Tradelines</li>
             <li>Paystub verification</li>
-            </ul>
+          </ul>
         </div>
-        </section>
+      </section>
 
-        {/* Replay CTA Row */}
+      {/* Replay CTA Row */}
       <section className="riskplay-row1">
-        
         <div className="row-right1">
           <img src="/proofs.JPG" alt="Credit Fix" />
-          </div>
-          
+        </div>
       </section>
 
       {/* CTA Section */}
@@ -50,4 +49,6 @@ export default function PackagePage() {
       <Footer />
     </div>
   );
-}
+};
+
+export default PackagePage;
