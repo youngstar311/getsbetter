@@ -6,7 +6,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const Homepage: React.FC = () => {
-  const [aboutOpen, setAboutOpen] = useState<boolean>(false);
+  //const [aboutOpen, setAboutOpen] = useState<boolean>(false);
 
   return (
     <div className="homepage">
