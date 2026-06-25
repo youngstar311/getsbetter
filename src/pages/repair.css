@@ -1,0 +1,135 @@
+/* Intro */
+.risk-intro h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #c0392b;
+    margin: 40px 20px;
+    margin-top: 70px;
+  }
+  
+  /* Header Card */
+  .risk-header-card {
+    background: #3498db;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 600px;
+  }
+  
+  /* Video */
+  .risk-video {
+    text-align: center;
+    margin: 40px auto;
+  }
+  .risk-video iframe {
+    width: 80%;
+    height: 400px;
+    border-radius: 12px;
+  }
+  .video-cta {
+    margin-top: 20px;
+  }
+  .cta-btn {
+    background: #e67e22;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  .cta-btn:hover {
+    background: #d35400;
+    transform: translateY(-3px);
+  }
+  
+  /* Introducing */
+  .risk-introducing {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  .price-highlight {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #27ae60;
+    margin-top: 15px;
+  }
+  
+  /* Discover Section */
+  .risk-discover {
+    background: #f9f9f9;
+    padding: 40px 20px;
+  }
+  .discover-grid {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  .discover-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+  }
+  .discover-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  .discover-card h3 {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #2980b9;
+  }
+  
+  /* Learn Section */
+  .risk-learn {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  .learn-card {
+    border: 3px outset #3498db;
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 700px;
+    background: white;
+  }
+  .learn-card ul {
+    list-style: none;
+    padding: 0;
+  }
+  .learn-card li {
+    margin: 10px 0;
+    font-size: 1rem;
+    text-align: left;
+  }
+  
+  /* Pricing Animation */
+  .risk-pricing {
+    text-align: center;
+    padding: 40px 20px;
+    background: #2c3e50;
+    color: #f1c40f;
+  }
+  .zoom-btn {
+    animation: zoomInOut 2s infinite;
+  }
+  @keyframes zoomInOut {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+  }
+  .midnight {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #e74c3c;
+  }
+  
