@@ -24,8 +24,8 @@ const App: React.FC = () => {
         <Route path="/services/risk" element={<Repair />} />
         <Route path="/services/performance" element={<Playbook />} />
         <Route path="/services/technology" element={<PackagePage />} />
-        <Route path="/services/change" element={<RiskFreePage />} />
         <Route path="/services/changee" element={<Document />} />
+        <Route path="/services/change" element={<RiskFreePage />} />
       </Routes>
     </Router>
   );

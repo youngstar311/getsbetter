@@ -76,12 +76,13 @@ const Homepage: React.FC = () => {
             <Link to="/services/technology" className="service-link">Learn More →</Link>
           </div>
           <div className="service-card change">
-            <h3>Grant Funding</h3>
-            <Link to="/services/changee" className="service-link">Learn More →</Link>
-          </div>
-          <div className="service-card change">
             <h3>Get all Documents Done</h3>
             <p>Do you need docs?</p>
+            <Link to="/services/changee" className="service-link">Learn More →</Link>
+          </div>
+          <div className="service-card changer">
+            <h3> Grant Funding</h3>
+            <p>Access to grants made easy  </p>
             <Link to="/services/change" className="service-link">Learn More →</Link>
           </div>
         </div>

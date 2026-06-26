@@ -102,6 +102,8 @@ body {
 .service-card.performance { background: #8e44ad; }
 .service-card.technology { background: #2980b9; }
 .service-card.change { background: #d35400; }
+.service-card.changer { background: #333; }
+
 
 .service-card:hover {
   transform: translateY(-8px) scale(1.02);

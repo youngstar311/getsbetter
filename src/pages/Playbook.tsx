@@ -8,12 +8,12 @@ const Playbook: React.FC = () => {
     <div className="homepage">
       <Navbar />
 
-      {/* Bold Intro */}
+      {/* Intro */}
       <section className="riskplay-intro">
         <h1>LIMITED-TIME BONUS AVAILABLE!</h1>
       </section>
 
-      {/* Rectangle Background Section */}
+      {/* Rectangle Section */}
       <section className="riskplay-rect">
         <div className="rect-content">
           <h2>Get my exact playbook to shut down debt collectors and force deletions in 30 days or less</h2>
@@ -21,7 +21,7 @@ const Playbook: React.FC = () => {
         </div>
       </section>
 
-      {/* Replay CTA Row */}
+      {/* CTA Row */}
       <section className="riskplay-row">
         <div className="row-left">
           <img src="/mission.JPG" alt="Credit Fix" />
@@ -43,7 +43,7 @@ const Playbook: React.FC = () => {
         </div>
       </section>
 
-      {/* What's Included */}
+      {/* Included Section */}
       <section className="riskplay-included">
         <h2>What’s Included?</h2>
         <div className="included-grid">
@@ -65,7 +65,7 @@ const Playbook: React.FC = () => {
         </div>
       </section>
 
-      {/* Teach Me CTA */}
+      {/* CTA */}
       <section className="riskplay-teach">
         <button className="swing-btn">Teach Me How To Shut Down Collectors — LIMITED TIME ONLY</button>
       </section>
@@ -73,9 +73,10 @@ const Playbook: React.FC = () => {
       {/* Divider */}
       <div className="opt-divider fade-section"></div>
 
+      <section className="random">
       <h2>We've personally helped over 1k students and removed hundreds of thousands in debt</h2>
-
-      {/* Replay CTA Row */}
+      </section>
+      {/* Expectations Row */}
       <section className="riskplay-row">
         <div className="row-left">
           <img src="/playbook.webp" alt="Credit Fix" />
@@ -93,12 +94,12 @@ const Playbook: React.FC = () => {
         </div>
       </section>
 
-      {/* Animated Ready Section */}
+      {/* Ready CTA */}
       <section className="riskplay-ready">
         <button className="animated-btn"><h3>➡️ YES, I'M READY TO GET RESULTS</h3></button>
       </section>
 
-      {/* Why This Method */}
+      {/* Method Section */}
       <section className="riskplay-method">
         <h2>Why This 90 Method is the Best Path to Success</h2>
         <p>With countless other paths out there, here's why this method is the best.</p>
@@ -127,7 +128,7 @@ const Playbook: React.FC = () => {
         </section>
       </section>
 
-      {/* What You Will Learn */}
+      {/* Learn Section */}
       <section className="riskplay-learn">
         <h2>What You Will Learn: The 3 Stages</h2>
         <p>Learn exactly how to shut down collectors, force deletions, and protect yourself using federal law.</p>
@@ -150,7 +151,7 @@ const Playbook: React.FC = () => {
         </div>
       </section>
 
-      {/* Case Study Section */}
+      {/* Case Study */}
       <section className="riskplay-case">
         <h2>You Can Be Our Next Case Study!</h2>
         <p>Take a look at our student's results! My Deletion Blueprint can take everything to the next level.</p>
@@ -195,4 +196,3 @@ const Playbook: React.FC = () => {
 };
 
 export default Playbook;
-``

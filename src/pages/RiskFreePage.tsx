@@ -31,11 +31,11 @@ const RiskFreePage: React.FC = () => {
       <section className="riskfree-included">
         <h2>What's Included</h2>
         <ul>
-          <li>✔ Easy-to-understand videos explaining everything you need to know to start your business the right way</li>
-          <li>✔ Connected links for everything I talk about</li>
-          <li>✔ Thousands of different grants to apply for, with direct links</li>
-          <li>✔ Grants for several categories you can qualify for, including emergencies (hardships)</li>
-          <li>✔ Resources and secrets to get approved</li>
+          <li> Easy-to-understand videos explaining everything you need to know to start your business the right way</li>
+          <li> Connected links for everything I talk about</li>
+          <li> Thousands of different grants to apply for, with direct links</li>
+          <li> Grants for several categories you can qualify for, including emergencies (hardships)</li>
+          <li> Resources and secrets to get approved</li>
         </ul>
         <button className="cta-btn">Get Started</button>
       </section>

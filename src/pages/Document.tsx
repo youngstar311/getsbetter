@@ -1,9 +1,38 @@
-import React from "react";
+
+import React, { useEffect, useState } from "react";
+
 import "../pages/Document.css";
+import "../components/Testimonials.css"
+import "../components/MissionSection.css"
+
+
 import Navbar from "../components/Navbar.tsx";
 import Footer from "../components/Footer.tsx";
+import MissionSection from "../components/MissionSection.tsx";
+import Testimonials from "../components/Testimonials.tsx";
+
 
 const Document: React.FC = () => {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+      const toggleFAQ = (index: number) => {
+          setActiveIndex(activeIndex === index ? null : index);
+        };
+      
+        useEffect(() => {
+          const sections = document.querySelectorAll(".fade-section");
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("visible");
+                }
+              });
+            },
+            { threshold: 0.2 }
+          );
+          sections.forEach((sec) => observer.observe(sec));
+          return () => observer.disconnect();
+        }, []);
   return (
     <div className="homepage">
       <Navbar />
@@ -37,6 +66,11 @@ const Document: React.FC = () => {
         <button className="cta-btn">➡️ Secure Your Documents Now</button>
         <p className="limited">LIMITED TIME OFFER</p>
       </section>
+
+      <MissionSection/>
+
+      <Testimonials />
+      
 
       <Footer />
     </div>
