@@ -1,12 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import "../pages/Homepage.css"; // Import the CSS file for styling
+import "../pages/tradeline.css";
 import Navbar from "../components/Navbar.tsx";
 import Footer from "../components/Footer.tsx";
 
 const Homepage: React.FC = () => {
   //const [aboutOpen, setAboutOpen] = useState<boolean>(false);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const toggleFAQ = (index: number) => {
+      setActiveIndex(activeIndex === index ? null : index);
+    };
+  
+    useEffect(() => {
+      const sections = document.querySelectorAll(".fade-section");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+      sections.forEach((sec) => observer.observe(sec));
+      return () => observer.disconnect();
+    }, []);
+  
 
   return (
     <div className="homepage">
@@ -62,62 +84,23 @@ const Homepage: React.FC = () => {
         </div>
       </section>
 
-      {/* Document Section */}
-      <section id="documents" className="documents">
-        <h2>Knowledge Hub</h2>
-        <div className="document-grid">
-          <div className="document-card whitepapers">
-            <img src="/covers/whitepapers.jpg" alt="Whitepapers" className="doc-cover" />
-            <h3>Whitepapers</h3>
-            <p>In‑depth insights into operational excellence and consulting strategies.</p>
-            <Link to="/docs/whitepapers" className="doc-link">Explore →</Link>
-          </div>
-          <div className="document-card case">
-            <img src="/covers/case-studies.jpg" alt="Case Studies" className="doc-cover" />
-            <h3>Case Studies</h3>
-            <p>Real‑world examples showcasing successful transformations.</p>
-            <Link to="/docs/case-studies" className="doc-link">Explore →</Link>
-          </div>
-          <div className="document-card guides">
-            <img src="/covers/guides.jpg" alt="Guides & Templates" className="doc-cover" />
-            <h3>Guides & Templates</h3>
-            <p>Practical resources to streamline your business processes.</p>
-            <Link to="/docs/guides" className="doc-link">Explore →</Link>
-          </div>
-          <div className="document-card reports">
-            <img src="/covers/whitepapers.jpg" alt="Research Reports" className="doc-cover" />
-            <h3>Research Reports</h3>
-            <p>Data‑driven analysis of industry trends and opportunities.</p>
-            <Link to="/docs/reports" className="doc-link">Explore →</Link>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Mission & About Section */}
-      <section id="about" className="about-card">
-        <h2 className="about-title">Our Mission & Company</h2>
-        <div className="about-content">
-          <p className="mission">
-            <strong>Mission Statement:</strong>  
-            To empower businesses with innovative consulting solutions that drive sustainable growth, operational excellence, and long‑term success.
-          </p>
-          <div className="divider"></div>
-          <p className="about-company">
-            <strong>About the Company:</strong>  
-            ConsultingPro is a trusted partner for organizations seeking transformation. We combine industry expertise, data‑driven insights, and tailored strategies to deliver measurable results.
-          </p>
-          <div className="divider"></div>
-          <div className="about-details">
-            <h3>Requirements</h3>
-            <p>Provide a clear outline of your operational challenges and goals.</p>
-            <div className="divider"></div>
-            <h3>Pricing</h3>
-            <p>Flexible models — hourly consulting, project packages, and retainers.</p>
-            <h3>Payment</h3>
-            <p>Secure payments via bank transfer, credit card, or online platforms.</p>
+        <section className="opt-mission fade-section">
+          <img src="/mission.JPG" alt="Mission" className="mission-img" />
+          <div className="mission-text">
+            <h2>Our Mission</h2>
+            <p>To improve the quality of life for those who have a goal. To be a company that is forthcoming and reliable...</p>
+            <button
+              className="contact-btn"
+              onClick={() => document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" })}
+            >
+              Contact Us
+            </button>
           </div>
-        </div>
-      </section>
+        </section>
+
 
       {/* Testimonials Section */}
       <section id="testimonials" className="testimonials">
@@ -138,13 +121,7 @@ const Homepage: React.FC = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact-proof" className="contact-proof">
-        <h2>Contact Us</h2>
-        <p>We’d love to hear from you. Reach out for inquiries or collaborations:</p>
-        <p><strong>Email:</strong> <a href="mailto:info@consultingpro.com">info@consultingpro.com</a></p>
-      </section>
-
+      
       {/* Footer Section */}
       <Footer />
     </div>
