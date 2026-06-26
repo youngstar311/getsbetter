@@ -3,6 +3,9 @@ import "../pages/Tradeline.css";
 
 import Navbar from "../components/Navbar.tsx";
 import Footer from "../components/Footer.tsx";
+import MissionSection from "../components/MissionSection.tsx";
+import Testimonials from "../components/Testimonials.tsx";
+
 
 const Tradeline: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -63,7 +66,7 @@ const Tradeline: React.FC = () => {
 
       {/* Document Section */}
       <section id="documents" className="documents">
-        <h2>Important sources</h2>
+        <h1>Important sources</h1>
         <div className="document-grid">
           <div className="document-card"><img src="/link_1.JPG" alt="Source 1" className="doc-cover" /></div>
           <div className="document-card"><img src="/link_2.JPG" alt="Source 2" className="doc-cover" /></div>
@@ -73,32 +76,21 @@ const Tradeline: React.FC = () => {
       </section>
 
       {/* Mission Statement */}
-      <section className="opt-mission fade-section">
-        <img src="/mission.JPG" alt="Mission" className="mission-img" />
-        <div className="mission-text">
-          <h2>Our Mission</h2>
-          <p>To improve the quality of life for those who have a goal. To be a company that is forthcoming and reliable...</p>
-          <button
-            className="contact-btn"
-            onClick={() => document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" })}
-          >
-            Contact Us
-          </button>
-        </div>
-      </section>
+      <MissionSection/>
 
       {/* Contact Form */}
       <section id="contact-form" className="opt-form fade-section">
-        <h2>Non-Posting Assistance</h2>
+        <h1>Non-Posting Assistance</h1>
         <p>If it has been 14 days after your statement date and the tradeline isn’t showing, please fill out the form below.</p>
         <form>
           <input type="text" placeholder="Name" required />
           <input type="email" placeholder="Email" required />
-          <textarea placeholder="PLEASE INCLUDE THE FOLLOWING:
-                USERNAME:
-                PASSWORD: 
-                SECURITY QUESTION ANSWER:
-                4 DIGIT PIN:" />
+          {/* Pre-filled textarea with editable text */}
+          <textarea required defaultValue={`PLEASE INCLUDE THE FOLLOWING:
+USERNAME:
+PASSWORD:
+SECURITY QUESTION ANSWER:
+4 DIGIT PIN:`}></textarea>
           <button type="submit">Submit</button>
         </form>
       </section>

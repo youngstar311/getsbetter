@@ -1,13 +1,42 @@
 // ServicePage.jsx
+
+import React, { useEffect, useState } from "react";
+
 import "../pages/Homepage.css";
 import "../pages/ServiceCpn.css";
 import "../pages/RiskFreePage.css"
+import "../components/Testimonials.css"
+import "../components/MissionSection.css"
+
 
 
 import Navbar from "../components/Navbar.tsx";
 import Footer from "../components/Footer.tsx";
+import MissionSection from "../components/MissionSection.tsx";
+import Testimonials from "../components/Testimonials.tsx";
+
 
 export default function ServiceCpn() {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+    const toggleFAQ = (index: number) => {
+        setActiveIndex(activeIndex === index ? null : index);
+      };
+    
+      useEffect(() => {
+        const sections = document.querySelectorAll(".fade-section");
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+              }
+            });
+          },
+          { threshold: 0.2 }
+        );
+        sections.forEach((sec) => observer.observe(sec));
+        return () => observer.disconnect();
+      }, []);
   return (
 
     <div className="homepage">
@@ -68,27 +97,18 @@ export default function ServiceCpn() {
           <img src="/blank.JPG" alt="Risk Free Blueprint" className="intro-img" />
 
           
+
+          
         </section>
 
         {/* Testimonials Section */}
-        <section id="testimonials" className="testimonials">
-        <h2>What Our Clients Say</h2>
-        <div className="testimonial-grid">
-            <div className="testimonial-card">
-            <p>"ConsultingPro transformed our operations. Efficiency improved and costs dropped significantly."</p>
-            <h4>- Sarah, Startup Founder</h4>
-            </div>
-            <div className="testimonial-card">
-            <p>"Their risk management strategies gave us confidence to expand globally."</p>
-            <h4>- James, CEO</h4>
-            </div>
-            <div className="testimonial-card">
-            <p>"Professional, insightful, and results‑driven. Highly recommended."</p>
-            <h4>- Anita, Operations Manager</h4>
-            </div>
-        </div>
+        <MissionSection />
+
+          {/* Testimonials Section */}
+          <Testimonials />
+        
         </section>
-        </section>
+        
 
         {/* Footer Section */}
                <Footer />

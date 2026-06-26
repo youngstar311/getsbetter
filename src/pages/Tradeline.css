@@ -1,250 +1,294 @@
+/*
+  Tradeline.css
+  Responsive, polished design for Tradeline page
+*/
+
+/* Reset & Base */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.homepage {
+  margin: 0;
+  padding: 0;
+  border: none; /* remove unwanted border line */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #fdfdfd;
+  color: #2c3e50;
+}
+
 /* Hero Header */
 .opt-header {
-    position: relative;
-  }
-  .opt-hero-img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    opacity: 0.8; /* transparency */
-  }
-  .opt-overlay {
-    position: absolute;
-    bottom: 20px;
-    left: 30px;
-    background: rgba(52, 152, 219, 0.7); /* blue accent overlay */
-    padding: 20px;
-    border-radius: 8px;
-    color: white;
-  }
-  
-  /* Special Card */
-  .opt-special-card {
-    background: white;
-    border: 3px outset #3498db;
-    margin: 0;
-    padding: 30px;
-    text-align: center;
-  }
-  .cta-btn {
-    margin-top: 15px;
-    padding: 12px 20px;
-    background: #3498db;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  .cta-btn:hover { background: #2980b9; }
-  
-  /* Documents Grid */
-  .opt-documents { padding: 40px 20px; }
-  .opt-doc-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    gap: 20px;
-  }
-  .opt-doc-card {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
-    padding: 20px;
-    text-align: center;
-  }
-  .opt-doc-card img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
+  position: relative;
+  margin-top: 60px; /* offset for sticky navbar height */
+}
+.opt-hero-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  opacity: 0.8;
+}
+.opt-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  background: rgba(52, 152, 219, 0.7);
+  padding: 20px;
+  border-radius: 8px;
+  color: #fff;
+}
+.opt-overlay h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+.opt-overlay p {
+  font-size: 1rem;
+  margin-top: 8px;
+}
 
-  .document-card.whitepapers { background: #e4e8ec; }
-  .document-card.case { background: #27ae60; }
-  .document-card.guides { background: #8e44ad; }
-  .document-card.reports { background: #e67e22; }
+/* Special Card */
+.opt-special-card {
+  background: #fff;
+  border: 3px solid #3498db;
+  margin: 40px auto;
+  padding: 30px;
+  text-align: center;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+.opt-special-card h2 {
+  color: #2980b9;
+  font-size: larger;
+  margin-bottom: 10px;
 
-  /* Cover images inside document cards */
-  .doc-cover {
-    width: 100%;
-    height: 100;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
-  }
-  
-  /* Mission Section */
+}
+.cta-btn {
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.cta-btn:hover {
+  background: #2980b9;
+  transform: scale(1.05);
+}
+
+/* Documents Grid */
+.documents {
+  padding: 40px 20px;
+}
+.documents h1 {
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-weight: 800;
+}
+.document-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
+}
+.document-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+}
+.doc-cover {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Mission Section */
+.opt-mission {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+.mission-img {
+  width: 50%;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+.mission-text {
+  flex: 1;
+}
+.contact-btn {
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #f1c40f;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.contact-btn:hover {
+  background: #d4ac0d;
+}
+
+/* Contact Form */
+.opt-form {
+  background: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  max-width: 900px;
+  margin: 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+.opt-form h1 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+.opt-form p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+.opt-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: auto;
+  margin-top: 30px;
+}
+.opt-form input,
+.opt-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  text-align: left;
+  font-size: 1rem;
+  background: #fdfdfd;
+  color: #2c3e50;
+}
+.opt-form textarea {
+  height: 100px;
+  resize: vertical;
+}
+.opt-form button {
+  padding: 12px;
+  background: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.opt-form button:hover {
+  background: #2980b9;
+  transform: scale(1.05);
+}
+
+/* FAQ Section */
+.opt-faq {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 40px auto;
+}
+.faq-item {
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.faq-question {
+  width: 100%;
+  background: #3498db;
+  color: #fff;
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.faq-question:hover {
+  background: #2980b9;
+}
+.arrow {
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  background: #f9f9f9;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 15px;
+}
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  padding: 15px;
+}
+.faq-item.active .arrow {
+  transform: rotate(-135deg);
+}
+
+/* Get in Touch */
+.opt-contact {
+  background: #2c3e50;
+  color: #f1c40f;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Scroll Fade Animation */
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   .opt-mission {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 40px 20px;
+    flex-direction: column;
+    text-align: center;
   }
   .mission-img {
-    width: 50%;
-    border-radius: 12px;
-  }
-  .mission-text { flex: 1; }
-  .contact-btn {
-    margin-top: 15px;
-    padding: 12px 20px;
-    background: #f1c40f;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  .contact-btn:hover { background: #d4ac0d; }
-  
-  /* Divider */
-  .opt-divider {
-    background: url("/images/divider-bg.jpg") center/cover no-repeat;
-    padding: 40px;
-    text-align: center;
-    color: white;
-    opacity: 0.9;
-  }
-  
-  /* Contact Form */
-  .opt-form {
-    background: white;
-    padding: 40px 20px;
-    text-align: center;
-  }
-  .opt-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 500px;
-    margin: auto;
-  }
-  .opt-form input, .opt-form textarea {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-  }
-
-  .opt-form textarea {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    height: 80px;
-  }
-  .opt-form button {
-    padding: 12px;
-    background: #3498db;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  .opt-form button:hover { background: #2980b9; }
-  
-  /* FAQ */
-  .opt-faq { 
-    padding: 40px 20px;
-    max-width: 800px;
-    margin: auto;
-
-  }
-
-  .faq-item {
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-
-  .faq-question {
     width: 100%;
-    background: #3498db;
-    color: white;
-    padding: 15px;
-    font-size: 1rem;
-    font-weight: 600;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s ease;
   }
-  
-  .faq-question:hover {
-    background: #2980b9;
+  .opt-overlay h1 {
+    font-size: 1.6rem;
   }
-  
-  .arrow {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border-right: 2px solid white;
-    border-bottom: 2px solid white;
-    transform: rotate(45deg);
-    transition: transform 0.3s ease;
+  .opt-overlay p {
+    font-size: 0.9rem;
   }
-  
-  /* Answer hidden by default */
-  .faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    background: #f9f9f9;
-    transition: max-height 0.4s ease, padding 0.3s ease;
-    padding: 0 15px;
+  .cta-btn {
+    width: 100%;
   }
-  
-  /* Active state */
-  .faq-item.active .faq-answer {
-    max-height: 200px;
-    padding: 15px;
+  .opt-form {
+    padding: 30px 15px;
   }
-  
-  .faq-item.active .arrow {
-    transform: rotate(-135deg); /* arrow flips down */
+  .opt-form h1 {
+    font-size: 1.4rem;
   }
-  .opt-faq details {
-    margin-bottom: 15px;
-    background: #f9f9f9;
-    padding: 15px;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  
-  /* Get in Touch */
-  .opt-contact {
-    background: #2c3e50;
-    color: #f1c40f;
-    text-align: center;
-    padding: 20px;
-  }
-
-  /* Scroll Fade Animation */
-  .fade-section {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-  }
-  
-  .fade-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  /* FAQ animations already included */
-  .faq-item.active .faq-answer {
-    max-height: 200px;
-    padding: 15px;
-    opacity: 1;
-    animation: fadeIn 0.4s ease;
-  }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  
-  /* Responsive */
-  @media (max-width:768px) {
-    .opt-mission { flex-direction: column; }
-    .mission-img { width: 100%; }
-  }
-  
+}

@@ -5,6 +5,9 @@ import "../pages/Homepage.css"; // Import the CSS file for styling
 import "../pages/Tradeline.tsx";
 import Navbar from "../components/Navbar.tsx";
 import Footer from "../components/Footer.tsx";
+import MissionSection from "../components/MissionSection.tsx";
+import Testimonials from "../components/Testimonials.tsx";
+
 
 const Homepage: React.FC = () => {
   //const [aboutOpen, setAboutOpen] = useState<boolean>(false);
@@ -87,39 +90,13 @@ const Homepage: React.FC = () => {
       
 
       {/* Mission & About Section */}
-        <section className="opt-mission fade-section">
-          <img src="/mission.JPG" alt="Mission" className="mission-img" />
-          <div className="mission-text">
-            <h2>Our Mission</h2>
-            <p>To improve the quality of life for those who have a goal. To be a company that is forthcoming and reliable...</p>
-            <button
-              className="contact-btn"
-              onClick={() => document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" })}
-            >
-              Contact Us
-            </button>
-          </div>
-        </section>
+        
+        <MissionSection />
 
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="testimonials">
-        <h2>What Our Clients Say</h2>
-        <div className="testimonial-grid">
-          <div className="testimonial-card">
-            <p>"ConsultingPro transformed our operations. Efficiency improved and costs dropped significantly."</p>
-            <h4>- Sarah, Startup Founder</h4>
-          </div>
-          <div className="testimonial-card">
-            <p>"Their risk management strategies gave us confidence to expand globally."</p>
-            <h4>- James, CEO</h4>
-          </div>
-          <div className="testimonial-card">
-            <p>"Professional, insightful, and results‑driven. Highly recommended."</p>
-            <h4>- Anita, Operations Manager</h4>
-          </div>
-        </div>
-      </section>
+      <Testimonials />
+      
 
       
       {/* Footer Section */}

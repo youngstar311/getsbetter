@@ -1,9 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
 import "./Repair.css";
 import Navbar from "../components/Navbar.tsx";
 import Footer from "../components/Footer.tsx";
+import Testimonials from "../components/Testimonials.tsx";
+
 
 const Repair: React.FC = () => {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+      const toggleFAQ = (index: number) => {
+          setActiveIndex(activeIndex === index ? null : index);
+        };
+      
+        useEffect(() => {
+          const sections = document.querySelectorAll(".fade-section");
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("visible");
+                }
+              });
+            },
+            { threshold: 0.2 }
+          );
+          sections.forEach((sec) => observer.observe(sec));
+          return () => observer.disconnect();
+        }, []);
   const discoverItems: { img: string; title: string; desc: string }[] = [
     {
       img: "/collection.WEBP",
@@ -90,6 +113,9 @@ const Repair: React.FC = () => {
           </ul>
         </div>
       </section>
+
+      {/* testimonisls */}
+      <Testimonials />
 
       {/* Animated Pricing */}
       <section className="risk-pricing">
