@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import "../pages/Homepage.css"; // Import the CSS file for styling
-import "../pages/tradeline.css";
+import "../pages/Tradeline.tsx";
 import Navbar from "../components/Navbar.tsx";
 import Footer from "../components/Footer.tsx";
 
