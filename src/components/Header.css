@@ -1,8 +1,4 @@
-/*
-  Header.css
-  Sticky header with logo, responsive hamburger menu, and hero image
-*/
-
+/* Base Header */
 .header {
     position: sticky;
     top: 0;
@@ -25,12 +21,9 @@
     height: 50px;
     transition: transform 0.3s ease;
   }
+  .logo img:hover { transform: scale(1.1); }
   
-  .logo img:hover {
-    transform: scale(1.1);
-  }
-  
-  /* Navigation Desktop*/
+  /* Desktop Navigation */
   .nav ul {
     list-style: none;
     display: flex;
@@ -38,17 +31,13 @@
     margin: 0;
     padding: 0;
   }
-  
   .nav a {
     color: #f1c40f;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
   }
-  
-  .nav a:hover {
-    color: #1abc9c;
-  }
+  .nav a:hover { color: #1abc9c; }
   
   /* Hamburger Menu */
   .menu-toggle {
@@ -57,14 +46,11 @@
     justify-content: space-between;
     width: 28px;
     height: 22px;
-    font-size: 1.8rem;
     background: none;
     border: none;
-    color: #f1c40f;
     cursor: pointer;
     z-index: 1100;
   }
-
   .menu-toggle span {
     display: block;
     height: 3px;
@@ -73,87 +59,36 @@
     border-radius: 2px;
     transition: all 0.3s ease;
   }
+  /* Animate into X */
+  .menu-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+  .menu-toggle.open span:nth-child(2) { opacity: 0; }
+  .menu-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
   
-  /* Hero Section */
-  .hero {
-    position: relative;
-    width: 100%;
-  }
-  
-  .header-photo {
-    width: 100%;
-    height: auto;
-    display: block;
-    filter: brightness(70%);
-  }
-  
-  .overlay {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 15px 25px;
-    border-radius: 8px;
-    animation: slideUp 1s ease;
-  }
-  
-  .title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #f1c40f;
-  }
-  
-  .subtitle {
-    font-size: 1.2rem;
-    font-weight: 300;
-    color: #ecf0f1;
-  }
-  
-  /* Animations */
-  @keyframes slideUp {
-    from { transform: translateY(20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-  }
-
-  .menu-toggle.open span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-  
-  .menu-toggle.open span:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .menu-toggle.open span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-  }
-  
-  /* Responsive */
+  /* Mobile Collapse */
   @media (max-width: 756px) {
-
-    .menu-toggle{
-        display: flex;
-    }
+    .menu-toggle { display: flex; }
+  
+    /* Hide nav off-canvas by default */
     .nav {
-      display: none;
-      flex-direction: column;
-      background: #2c3e50;
       position: absolute;
       top: 60px;
-      right: 0;
+      right: -220px; /* push off screen */
       width: 200px;
+      background: #2c3e50;
       padding: 20px;
       border-radius: 8px;
-      animation: slideIn 0.3s ease forwards;
+      flex-direction: column;
+      gap: 15px;
+      opacity: 0;
+      pointer-events: none;
+      transition: right 0.3s ease, opacity 0.3s ease;
     }
   
+    /* When open, slide in */
     .nav.open {
-      display: flex;
-    }
-  
-    .menu-toggle {
-      display: block;
+      right: 0;
+      opacity: 1;
+      pointer-events: auto;
     }
   
     .nav ul {
@@ -161,18 +96,10 @@
       gap: 15px;
     }
     .nav a {
-        color: #f1c40f;
-        font-weight: 600;
-        text-decoration: none;
-      }
-    
-      .nav a:hover {
-        color: #1abc9c;
-      }
-  }
-/* Slide-in animation for dropdown */
-@keyframes slideIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+      color: #f1c40f;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .nav a:hover { color: #1abc9c; }
   }
   
