@@ -199,7 +199,7 @@ const Playbook: React.FC = () => {
         <p>Take a look at our student's results! My Deletion Blueprint can take everything to the next level.</p>
         <div className="case-grid">
           <div className="case-card"><img src="/cases1.jpeg" alt="Case Study 2" /></div>
-          <div className="case-card"><img src="/cases2.Jpeg" alt="Case Study 3" /></div>
+          <div className="case-card"><img src="/cases2.jpeg" alt="Case Study 3" /></div>
         </div>
         <div className="case-cta">
           <button className="case-btn">I'M READY TO GET RESULTS</button>
