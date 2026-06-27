@@ -9,12 +9,12 @@ const testimonials = [
     rating: 5,
   },
   {
-    text: "Their credit management strategies is indeed effective. Monica you are greatly appreciated",
+    text: "I was nervous about starting the credit repair process, but the team explained everything clearly and kept me updated every step of the way. My credit profile is in much better shape now, and I feel more confident about my financial future. Highly recommend!",
     author: "James",
     rating: 4,
   },
   {
-    text: "Professional, insightful, and results‑driven. Highly recommended.",
+    text: "The tradeline process was smooth and professional. Every question I had was answered promptly, and the experience was exactly as explained. I'm very happy with the service and would definitely work with them again.",
     author: "Anita",
     rating: 5,
   },
@@ -29,7 +29,7 @@ const testimonials = [
     rating: 5,
   },
   {
-    text: "Reliable, trustworthy, and always delivering beyond expectations.",
+    text: "Finding an apartment had been stressful, but the advice and credit assistance I received helped me become a stronger applicant. I'm grateful for the support and excited to be in my new place.",
     author: "Chris & Gabrriella, ",
     rating: 5,
   },

@@ -6,11 +6,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* Company Info */}
-        <div className="footer-section">
-          <h3>Creditgetsbetterwithmonica</h3>
-          <p>&copy; {new Date().getFullYear()} Creditgetsbetterwithmonica All rights reserved.</p>
-        </div>
+        
 
         {/* Contact Info */}
         <div className="footer-section">
@@ -26,13 +22,18 @@ const Footer: React.FC = () => {
           <h4>Connect</h4>
           <p>
             <a
-              href="https://linkedin.com/company/consultingpro"
+              href="https://wa.me/message/EONBN3ZKVSOGJ1"
               target="_blank"
               rel="noopener noreferrer"
             >
               Whatsapp
             </a>
           </p>
+        </div>
+        {/* Company Info */}
+        <div className="footer-section">
+          <h3>Creditgetsbetterwithmonica</h3>
+          <p>&copy; {new Date().getFullYear()} Creditgetsbetterwithmonica All rights reserved.</p>
         </div>
       </div>
     </footer>
