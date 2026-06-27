@@ -3,12 +3,14 @@
 =========================== */
 
 .navbar {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
     background: #2c3e50;
     box-shadow: 0 3px 12px rgba(0,0,0,.2);
-    width: 100%;
+    
   }
   
   .navbar-container {
@@ -133,6 +135,15 @@
       display:block;
       padding:18px;
     }
+
     
+
+    
+
   
+  }
+    @media (max-width: 768px) {
+    .logo img {
+      height: 60px;  /* smaller logo for mobile */
+    }
   }

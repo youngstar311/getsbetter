@@ -1,0 +1,41 @@
+/* src/pages/AdminDashboard.css */
+.admin-dashboard {
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+  }
+  
+  .tabs {
+    margin-bottom: 1rem;
+  }
+  
+  .tabs button {
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #3498db;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .tabs button:hover {
+    background: #2980b9;
+  }
+  
+  .tab-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  .tab-content th,
+  .tab-content td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+  }
+  
+  .tab-content th {
+    background-color: #f4f4f4;
+  }
+  

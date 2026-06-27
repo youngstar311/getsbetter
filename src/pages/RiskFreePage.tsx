@@ -64,7 +64,7 @@ const RiskFreePage: React.FC = () => {
 
       {/* Consultant Section */}
       <section className="riskfree-consultant">
-        <h2>I'm Brian, The Business Consultant Behind This Blueprint</h2>
+        <h2>I'm Monica, The Business Consultant Behind This CreditGetBetter-Monica</h2>
         <p>
           In my years of experience, I've helped many people get approved for over 100k in funding. I'm dedicated to helping entrepreneurs and business owners access capital to grow their business and become financially free.
         </p>
@@ -77,10 +77,30 @@ const RiskFreePage: React.FC = () => {
       <section className="riskfree-course">
         <h2>Course Overview</h2>
         <p>Submit your details to request more information and start your journey.</p>
-        <form>
-          <input type="text" placeholder="Full Name*" required />
-          <input type="email" placeholder="Email*" required />
-          <textarea placeholder="Additional Information"></textarea>
+        <form onSubmit={handleSubmit}>
+
+          <input 
+            type="text" 
+            placeholder="Full Name*" 
+            value={fullName}
+            onChange={(e) => setFullName(e.target.value)}
+            required 
+          />
+          <input 
+            type="email" 
+            placeholder="Email*" 
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required 
+          />
+
+          <textarea 
+            placeholder="Additional Information"
+            value={info}
+            onChange={(e) => setInfo(e.target.value)}
+
+          />
+
           <button type="submit" className="apply-btn">Apply Now</button>
         </form>
       </section>

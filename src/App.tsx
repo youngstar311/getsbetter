@@ -10,6 +10,7 @@ import Playbook from "./pages/Playbook.tsx";
 import PackagePage from "./pages/PackagePage.tsx";
 import Document from "./pages/Document.tsx";
 import RiskFreePage from "./pages/RiskFreePage.tsx";
+import AdminDashboard from "./pages/AdminDashboard.tsx";
 
 const App: React.FC = () => {
   return (
@@ -26,6 +27,7 @@ const App: React.FC = () => {
         <Route path="/services/technology" element={<PackagePage />} />
         <Route path="/services/changee" element={<Document />} />
         <Route path="/services/change" element={<RiskFreePage />} />
+        <Route path="/youngstar/admin" element={<AdminDashboard />}/>
       </Routes>
     </Router>
   );
