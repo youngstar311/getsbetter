@@ -144,6 +144,6 @@
   }
     @media (max-width: 768px) {
     .logo img {
-      height: 60px;  /* smaller logo for mobile */
+      height: 100px;  /* smaller logo for mobile */
     }
   }

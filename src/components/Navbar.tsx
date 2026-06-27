@@ -13,7 +13,9 @@ const Navbar: React.FC = () => {
       <div className="navbar-container">
 
         <div className="logo">
-          <img src="/logo.png" alt="Logo" />
+          <Link to="/" onClick={closeMenu}>
+            <img src="/logo.png" alt="Logo" />
+          </Link>
         </div>
 
         <button
@@ -26,13 +28,13 @@ const Navbar: React.FC = () => {
         </button>
 
         <ul className={menuOpen ? "nav-links open" : "nav-links"}>
-          <li><Link to="/services/strategy" onClick={closeMenu}>Cpn</Link></li>
-          <li><Link to="/services/optimization" onClick={closeMenu}>Tradeline</Link></li>
-          <li><Link to="/services/risk" onClick={closeMenu}>Credit repair</Link></li>
-          <li><Link to="/services/performance" onClick={closeMenu}>Books</Link></li>
-          <li><Link to="/services/technology" onClick={closeMenu}>Cars </Link></li>
-          <li><Link to="/services/changee" onClick={closeMenu}>Docs</Link></li>
-          <li><Link to="/services/change" onClick={closeMenu}>Grants</Link></li>
+          <li><Link to="/services/cpn" onClick={closeMenu}>Cpn</Link></li>
+          <li><Link to="/services/tradeline" onClick={closeMenu}>Tradeline</Link></li>
+          <li><Link to="/services/repair" onClick={closeMenu}>Credit repair</Link></li>
+          <li><Link to="/services/playbook" onClick={closeMenu}>Books</Link></li>
+          <li><Link to="/services/package" onClick={closeMenu}>Cars </Link></li>
+          <li><Link to="/services/docs" onClick={closeMenu}>Docs</Link></li>
+          <li><Link to="/services/grants" onClick={closeMenu}>Grants</Link></li>
         </ul>
       </div>
     </nav>

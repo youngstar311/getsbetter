@@ -171,7 +171,7 @@ body, html {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  width: 100%;
+  width: 80%;
   text-align: left;
   font-size: 1rem;
   background: #fdfdfd;
@@ -201,6 +201,10 @@ body, html {
   padding: 40px 20px;
   max-width: 800px;
   margin: 40px auto;
+}
+.opt-faq h2 {
+  color: #2c3e50;
+  font-size: 2rem;
 }
 .faq-item {
   margin-bottom: 15px;

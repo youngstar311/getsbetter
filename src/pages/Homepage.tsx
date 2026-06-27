@@ -48,42 +48,42 @@ const Homepage: React.FC = () => {
         <section className="riskplay-teach">
           <button className="swing-btn">Our Services</button>
         </section>
-        <h2>Our Services</h2>
+        <h2></h2>
         <div className="service-grid">
           <div className="service-card strategy">
             <h3>Cpn (Premades and Blank profile)</h3>
             <p>FULLY TRI-MERGE CPN.</p>
-            <Link to="/services/strategy" className="service-link">Learn More →</Link>
+            <Link to="/services/cpn" className="service-link">Learn More →</Link>
           </div>
           <div className="service-card optimization">
             <h3>Tradeline</h3>
             <p>Primaries Tradeline and AU’s Tradeline available</p>
-            <Link to="/services/optimization" className="service-link">Learn More →</Link>
+            <Link to="/services/tradeline" className="service-link">Learn More →</Link>
           </div>
           <div className="service-card risk">
             <h3>Credit repair</h3>
             <p>Removing negative accounts from your credit score (Includes boosting of your credit profile)</p>
-            <Link to="/services/risk" className="service-link">Learn More →</Link>
+            <Link to="/services/repair" className="service-link">Learn More →</Link>
           </div>
           <div className="service-card performance">
             <h3>Get My Exact Book</h3>
             <p>To shut down debt collectors and force deletions in 30 days or less.</p>
-            <Link to="/services/performance" className="service-link">Learn More →</Link>
+            <Link to="/services/playbook" className="service-link">Learn More →</Link>
           </div>
           <div className="service-card technology">
             <h3>Car & Apartment Packages</h3>
             <p>Full CPN House Car and Apartment Package</p>
-            <Link to="/services/technology" className="service-link">Learn More →</Link>
+            <Link to="/services/package" className="service-link">Learn More →</Link>
           </div>
           <div className="service-card change">
             <h3>Get all Documents Done</h3>
             <p>Do you need docs?</p>
-            <Link to="/services/changee" className="service-link">Learn More →</Link>
+            <Link to="/services/docs" className="service-link">Learn More →</Link>
           </div>
           <div className="service-card changer">
             <h3> Grant Funding</h3>
             <p>Access to grants made easy  </p>
-            <Link to="/services/change" className="service-link">Learn More →</Link>
+            <Link to="/services/grants" className="service-link">Learn More →</Link>
           </div>
         </div>
       </section>

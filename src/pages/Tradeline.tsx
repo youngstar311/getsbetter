@@ -159,11 +159,7 @@ const Tradeline: React.FC = () => {
         ))}
       </section>
 
-      {/* Get in Touch */}
-      <section className="opt-contact fade-section">
-        <h2>Get in Touch</h2>
-        <p>Email us at <a href="mailto:info@consultingpro.com">info@consultingpro.com</a></p>
-      </section>
+      
 
       <Footer />
     </div>

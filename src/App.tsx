@@ -20,13 +20,13 @@ const App: React.FC = () => {
         <Route path="/" element={<Homepage />} />
 
         {/* Service detail pages */}
-        <Route path="/services/strategy" element={<ServiceCpn />} />
-        <Route path="/services/optimization" element={<Tradeline />} />
-        <Route path="/services/risk" element={<Repair />} />
-        <Route path="/services/performance" element={<Playbook />} />
-        <Route path="/services/technology" element={<PackagePage />} />
-        <Route path="/services/changee" element={<Document />} />
-        <Route path="/services/change" element={<RiskFreePage />} />
+        <Route path="/services/cpn" element={<ServiceCpn />} />
+        <Route path="/services/tradeline" element={<Tradeline />} />
+        <Route path="/services/repair" element={<Repair />} />
+        <Route path="/services/playbook" element={<Playbook />} />
+        <Route path="/services/package" element={<PackagePage />} />
+        <Route path="/services/docs" element={<Document />} />
+        <Route path="/services/grants" element={<RiskFreePage />} />
         <Route path="/youngstar/admin" element={<AdminDashboard />}/>
       </Routes>
     </Router>
