@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         {/* Company Info */}
         <div className="footer-section">
           <h3>ConsultingPro</h3>
-          <p>&copy; {new Date().getFullYear()} ConsultingPro. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Creditgetsbetterwithmonica All rights reserved.</p>
         </div>
 
         {/* Contact Info */}
@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
           <h4>Contact</h4>
           <p>
             <strong>Email:</strong>{" "}
-            <a href="mailto:info@consultingpro.com">info@consultingpro.com</a>
+            <a href="mailto:support@Creditgetsbetterwithmonica.com">support@Creditgetsbetterwithmonica.com</a>
           </p>
         </div>
 

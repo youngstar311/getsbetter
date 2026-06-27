@@ -3,6 +3,7 @@ import "./RiskFreePage.css";
 
 import Navbar from "../components/Navbar.tsx";
 import Footer from "../components/Footer.tsx";
+import { supabase } from "../supabaseClient.js";  // import Supabase client
 
 const RiskFreePage: React.FC = () => {
   return (

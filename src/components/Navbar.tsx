@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
 import "./Navbar.css";
 
 const Navbar: React.FC = () => {
@@ -24,13 +26,14 @@ const Navbar: React.FC = () => {
         </button>
 
         <ul className={menuOpen ? "nav-links open" : "nav-links"}>
-          <li><a href="#about" onClick={closeMenu}>About</a></li>
-          <li><a href="#services" onClick={closeMenu}>Services</a></li>
-          <li><a href="#documents" onClick={closeMenu}>Knowledge Hub</a></li>
-          <li><a href="#testimonials" onClick={closeMenu}>Testimonials</a></li>
-          <li><a href="#contact-proof" onClick={closeMenu}>Contact</a></li>
+          <li><Link to="/services/strategy" onClick={closeMenu}>Cpn</Link></li>
+          <li><Link to="/services/optimization" onClick={closeMenu}>Tradeline</Link></li>
+          <li><Link to="/services/risk" onClick={closeMenu}>Credit repair</Link></li>
+          <li><Link to="/services/performance" onClick={closeMenu}>Books</Link></li>
+          <li><Link to="/services/technology" onClick={closeMenu}>Cars </Link></li>
+          <li><Link to="/services/changee" onClick={closeMenu}>Docs</Link></li>
+          <li><Link to="/services/change" onClick={closeMenu}>Grants</Link></li>
         </ul>
-
       </div>
     </nav>
   );

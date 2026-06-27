@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../pages/Tradeline.css";
+import { supabase } from "../supabaseClient.js";  // import client
+
 
 import Navbar from "../components/Navbar.tsx";
 import Footer from "../components/Footer.tsx";
@@ -12,6 +14,39 @@ const Tradeline: React.FC = () => {
 
   const toggleFAQ = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
+  };
+
+  const [npName, setNpName] = useState("");
+  const [npEmail, setNpEmail] = useState("");
+  const [npDetails, setNpDetails] = useState(
+    `PLEASE INCLUDE THE FOLLOWING:
+  USERNAME:
+  PASSWORD:
+  SECURITY QUESTION ANSWER:
+  4 DIGIT PIN:`
+  );
+
+  const handleNonPostingSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const { error } = await supabase
+      .from("non_posting_assistance")
+      .insert([{ name: npName, email: npEmail, details: npDetails }]);
+
+    if (error) {
+      console.error(error);
+      alert("Submission failed. Try again.");
+    } else {
+      alert("Assistance request submitted!");
+      setNpName("");
+      setNpEmail("");
+      setNpDetails(
+        `PLEASE INCLUDE THE FOLLOWING:
+  USERNAME:
+  PASSWORD:
+  SECURITY QUESTION ANSWER:
+  4 DIGIT PIN:`
+      );
+    }
   };
 
   useEffect(() => {
@@ -82,16 +117,27 @@ const Tradeline: React.FC = () => {
       <section id="contact-form" className="opt-form fade-section">
         <h1>Non-Posting Assistance</h1>
         <p>If it has been 14 days after your statement date and the tradeline isn’t showing, please fill out the form below.</p>
-        <form>
-          <input type="text" placeholder="Name" required />
-          <input type="email" placeholder="Email" required />
-          {/* Pre-filled textarea with editable text */}
-          <textarea required defaultValue={`PLEASE INCLUDE THE FOLLOWING:
-USERNAME:
-PASSWORD:
-SECURITY QUESTION ANSWER:
-4 DIGIT PIN:`}></textarea>
-          <button type="submit">Submit</button>
+        <form onSubmit={handleNonPostingSubmit}>
+          <input 
+          type="text" 
+          placeholder="Name"
+          value={npName} 
+          onChange={(e) => setNpName(e.target.value)}
+          required 
+        />
+          <input
+          type="email"
+          placeholder="Email"
+          value={npEmail}
+          onChange={(e) => setNpEmail(e.target.value)}
+          required
+        />
+        <textarea
+          required
+          value={npDetails}
+          onChange={(e) => setNpDetails(e.target.value)}
+        />
+        <button type="submit">Submit</button>
         </form>
       </section>
 
