@@ -121,7 +121,7 @@ const Repair: React.FC = () => {
       <section className="risk-pricing">
         <h2>JOIN TODAY FOR ONLY $300</h2>
         <button className="cta-btn zoom-btn">CLICK HERE TO GET ACCESS!</button>
-        <p className="midnight">ONLY $300!</p>
+        <p className="midnight"></p>
       </section>
 
       <Footer />

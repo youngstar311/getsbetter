@@ -66,7 +66,8 @@ body, html {
   margin-bottom: 20px;
   display: block;
 }
-.row-right1 h1 {
+.row-right1 h1,
+.row-right h2 {
   color: #2c3e50;
   margin-top: 30px;
   margin-bottom: 30px;

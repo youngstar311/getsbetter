@@ -1,9 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Playbook.css";
 import Navbar from "../components/Navbar.tsx";
 import Footer from "../components/Footer.tsx";
+import { supabase } from "../supabaseClient.ts"
 
 const Playbook: React.FC = () => {
+  const [fullName, setFullName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Save phone number into "message" field
+    const { error } = await supabase
+      .from("get_in_touch") // reuse same table schema
+      .insert([{ name: fullName, email, message: phone }]);
+
+    if (error) {
+      console.error(error);
+      alert("Submission failed. Please try again.");
+    } else {
+      alert("Playbook request submitted!");
+      setFullName("");
+      setPhone("");
+      setEmail("");
+    }
+  };
   return (
     <div className="homepage">
       <Navbar />
@@ -30,11 +53,30 @@ const Playbook: React.FC = () => {
         </div>
         <div className="row-right">
           <img src="/playbook.webp" alt="Credit Fix" />
-          <form>
-            <input type="text" placeholder="Full Name*" required />
+          <form onSubmit={handleSubmit}>
+            <input  
+              type="text" 
+              placeholder="Full Name*"
+              value={fullName}
+              onChange={(e) => setFullName(e.target.value)}
+              required
+            />
             <small>Full Name is required</small>
-            <input type="tel" placeholder="Phone*" required />
-            <input type="email" placeholder="Email*" required />
+
+            <input 
+              type="tel" 
+              placeholder="Phone*" 
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              required
+            />
+            <input 
+              type="email" 
+              placeholder="Email*"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required 
+            />
             <label>
               <input type="checkbox" required /> I agree to terms & conditions provided by Icon 818 LLC.
             </label>
@@ -134,17 +176,17 @@ const Playbook: React.FC = () => {
         <p>Learn exactly how to shut down collectors, force deletions, and protect yourself using federal law.</p>
         <div className="riskplay-row">
           <div className="learn-stage">
-            <img src="/old_way.webp" alt="Stage 1" />
+            <img src="/method1.JPG" alt="Stage 1" />
             <h3>SECRET METHOD #1</h3>
             <p>Use debt validation to force collectors to prove every dollar — or delete the account</p>
           </div>
           <div className="learn-stage">
-            <img src="/old_way.webp" alt="Stage 2" />
+            <img src="/method2.JPG" alt="Stage 2" />
             <h3>SECRET METHOD #2</h3>
             <p>Use cease & desist letters to legally stop all collector contact</p>
           </div>
           <div className="learn-stage">
-            <img src="/old_way.webp" alt="Stage 3" />
+            <img src="/method3.JPG" alt="Stage 3" />
             <h3>SECRET METHOD #3</h3>
             <p>Advanced strategies to protect yourself and permanently remove risks</p>
           </div>
@@ -156,7 +198,6 @@ const Playbook: React.FC = () => {
         <h2>You Can Be Our Next Case Study!</h2>
         <p>Take a look at our student's results! My Deletion Blueprint can take everything to the next level.</p>
         <div className="case-grid">
-          <div className="case-card"><img src="/case1.webp" alt="Case Study 1" /></div>
           <div className="case-card"><img src="/case2.webp" alt="Case Study 2" /></div>
           <div className="case-card"><img src="/case3.webp" alt="Case Study 3" /></div>
         </div>
@@ -185,7 +226,7 @@ const Playbook: React.FC = () => {
           <p>✅ <strong>Debt Validation Letter</strong> — $300 Value</p>
           <p>✅ <strong>Debt Tracker</strong> — $300 Value</p>
           <section className="riskplay-teach">
-            <button className="swing-btn">Today's Special Price $26.00</button>
+            <button className="swing-btn">Today's Special Price $250.00</button>
           </section>
         </div>
       </section>

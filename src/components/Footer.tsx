@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
       <div className="footer-container">
         {/* Company Info */}
         <div className="footer-section">
-          <h3>ConsultingPro</h3>
+          <h3>Creditgetsbetterwithmonica</h3>
           <p>&copy; {new Date().getFullYear()} Creditgetsbetterwithmonica All rights reserved.</p>
         </div>
 
@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              LinkedIn
+              Whatsapp
             </a>
           </p>
         </div>

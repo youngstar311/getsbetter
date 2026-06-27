@@ -4,33 +4,33 @@ import "../components/Testimonials.css";
 
 const testimonials = [
   {
-    text: "ConsultingPro transformed our operations. Efficiency improved and costs dropped significantly.",
-    author: "Sarah, Startup Founder",
+    text: "creditgetsbetterwithmonica transformed my credits. She's proffessional, and effiecient. I always recommend her service",
+    author: "Sarah",
     rating: 5,
   },
   {
-    text: "Their risk management strategies gave us confidence to expand globally.",
-    author: "James, CEO",
+    text: "Their credit management strategies is indeed effective. Monica you are greatly appreciated",
+    author: "James",
     rating: 4,
   },
   {
     text: "Professional, insightful, and results‑driven. Highly recommended.",
-    author: "Anita, Operations Manager",
+    author: "Anita",
     rating: 5,
   },
   {
-    text: "The team was responsive and guided us through complex challenges with ease.",
-    author: "David, Entrepreneur",
+    text: "Monica is responsive and guided us through complex challenges with ease.",
+    author: "David ,",
     rating: 4,
   },
   {
-    text: "Our performance metrics skyrocketed after their optimization strategies.",
-    author: "Maria, Product Manager",
+    text: "Our credits skyrocketed after their proffesional strategies was used for me.",
+    author: "Maria ",
     rating: 5,
   },
   {
     text: "Reliable, trustworthy, and always delivering beyond expectations.",
-    author: "Chris, Business Owner",
+    author: "Chris & Gabrriella, ",
     rating: 5,
   },
 ];
