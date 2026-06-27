@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../pages/Tradeline.css";
-import { supabase } from "../supabaseClient.js";  // import client
+import { supabase } from "../supabaseClient.ts";  // import client
 
 
 import Navbar from "../components/Navbar.tsx";

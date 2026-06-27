@@ -1,7 +1,7 @@
 // src/components/MissionSection.tsx
 import React, { useState } from "react";
 import "../components/MissionSection.css";
-import { supabase } from "../supabaseClient.js";  // import client
+import { supabase } from "../supabaseClient.ts";  // import client
 
 const MissionSection: React.FC = () => {
   const [showForm, setShowForm] = useState(false);

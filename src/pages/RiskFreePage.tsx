@@ -1,11 +1,32 @@
-import React from "react";
+import React, { useState} from "react";
 import "./RiskFreePage.css";
 
 import Navbar from "../components/Navbar.tsx";
 import Footer from "../components/Footer.tsx";
-import { supabase } from "../supabaseClient.js";  // import Supabase client
+import { supabase } from "../supabaseClient.ts";  // import Supabase client
 
 const RiskFreePage: React.FC = () => {
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [info, setInfo] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const { error } = await supabase
+      .from("riskfree_applications")   // create this table in Supabase
+      .insert([{ name: fullName, email, details: info }]);
+
+    if (error) {
+      console.error(error);
+      alert("Submission failed. Please try again.");
+    } else {
+      alert("Application submitted successfully!");
+      setFullName("");
+      setEmail("");
+      setInfo("");
+    }
+  };
   return (
     <div className="homepage">
       <Navbar />
@@ -16,7 +37,7 @@ const RiskFreePage: React.FC = () => {
         <p>
           You never have to pay back grants. No credit check to get approved, so you don't need good credit to qualify. It's basically free money you can use to grow your business!
         </p>
-        <div className="price-tag">$197</div>
+        <div className="price-tag">$250</div>
         <button className="cta-btn">Get Started</button>
       </section>
 
