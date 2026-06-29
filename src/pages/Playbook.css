@@ -26,7 +26,9 @@ body, html {
   color: #c0392b;
   margin: 40px 20px;
   margin-top: 80px; /* offset for sticky header */
+  padding-top: 80px;
 }
+
 
 /* Rectangle Section */
 .riskplay-rect {

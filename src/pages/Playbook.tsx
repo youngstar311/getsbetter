@@ -36,6 +36,7 @@ const Playbook: React.FC = () => {
         <h1>LIMITED-TIME BONUS AVAILABLE!</h1>
       </section>
 
+      
       {/* Rectangle Section */}
       <section className="riskplay-rect">
         <div className="rect-content">
